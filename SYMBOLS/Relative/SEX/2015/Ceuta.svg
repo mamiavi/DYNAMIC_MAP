@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="371.52pt" height="280.512pt" viewBox="0 0 371.52 280.512" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2021-11-24T20:23:24.612005</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.5.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 280.512 
+L 371.52 280.512 
+L 371.52 0 
+L 0 0 
+L 0 280.512 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 186.24659 19.296004 
+C 162.716486 19.296004 139.696769 26.208119 120.058773 39.170176 
+C 100.420777 52.132232 85.016431 70.581916 75.767175 92.217928 
+C 66.517918 113.853941 63.825 137.737678 68.024317 160.890033 
+C 72.223634 184.042387 83.133014 205.458973 99.391688 222.46842 
+L 186.24659 139.447168 
+L 186.24659 19.296004 
+z
+" style="fill: #0000ff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 99.391688 222.46842 
+C 113.123055 236.833856 130.206284 247.57072 149.105489 253.713702 
+C 168.004694 259.856684 188.135993 261.216 207.68946 257.669439 
+C 227.242928 254.122878 245.614468 245.78001 261.152368 233.390909 
+C 276.690269 221.001808 288.914493 204.949229 296.726009 186.676397 
+C 304.537525 168.403564 307.695 148.47501 305.914558 128.68243 
+C 304.134115 108.889851 297.470762 89.844729 286.523572 73.259337 
+C 275.576383 56.673945 260.683567 43.060681 243.184077 33.643459 
+C 225.684588 24.226238 206.119065 19.296 186.246567 19.296004 
+L 186.24659 139.447168 
+L 99.391688 222.46842 
+z
+" style="fill: #bf00bf"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+  </g>
+ </g>
+</svg>

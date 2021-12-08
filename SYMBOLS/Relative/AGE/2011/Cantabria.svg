@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="371.52pt" height="280.512pt" viewBox="0 0 371.52 280.512" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2021-11-22T10:33:25.384828</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.5.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 280.512 
+L 371.52 280.512 
+L 371.52 0 
+L 0 0 
+L 0 280.512 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7.2 273.312 
+L 364.32 273.312 
+L 364.32 7.2 
+L 7.2 7.2 
+L 7.2 273.312 
+z
+" style="fill: none"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 23.432727 273.312 
+L 91.781053 273.312 
+L 91.781053 90.9327 
+L 23.432727 90.9327 
+z
+" clip-path="url(#p10320b1db4)" style="fill: #bfbfff"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 108.868134 273.312 
+L 177.216459 273.312 
+L 177.216459 151.15705 
+L 108.868134 151.15705 
+z
+" clip-path="url(#p10320b1db4)" style="fill: #8080ff"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 194.303541 273.312 
+L 262.651866 273.312 
+L 262.651866 228.570301 
+L 194.303541 228.570301 
+z
+" clip-path="url(#p10320b1db4)" style="fill: #4040ff"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 279.738947 273.312 
+L 348.087273 273.312 
+L 348.087273 240.545657 
+L 279.738947 240.545657 
+z
+" clip-path="url(#p10320b1db4)" style="fill: #0000ff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p10320b1db4">
+   <rect x="7.2" y="7.2" width="357.12" height="266.112"/>
+  </clipPath>
+ </defs>
+</svg>

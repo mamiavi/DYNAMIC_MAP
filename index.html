@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Dynamic map">
+        <meta name="author" content="Manuel Miñambres Vidal">
+        <meta name="keywords" content="Cartography, dynamic map, unemployment, Geovisualization">
+        
+        <title>Unemployment dynamic map of Spain</title>
+        
+        <!--External JS-->
+        <script type="text/javascript" src="externalLibs/ol/ol.js"></script>
+        <script type="text/javascript" src="externalLibs/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="externalLibs/proj4/proj4.js"></script>
+        <script type="text/javascript" src="externalLibs/proj4/proj4-src.js"></script>
+
+        <!--External CSS-->
+        <link rel="stylesheet" href="externalLibs/ol/ol.css">
+        <link rel="stylesheet" href="externalLibs/bootstrap/css/bootstrap.css">
+        
+        <!--My JS-->
+        <script type="text/javascript" src="js/general.js"></script>
+        <script type="text/javascript" src="js/animation.js"></script>
+        <script type="text/javascript" src="js/symbols.js"></script>
+        <script type="text/javascript" src="js/map.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <!--My CSS-->
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+
+    <body>
+        <div id="div_title">
+            <h4>Unemployment evolution in Spain</h4>
+        </div>
+        <div id="div_body" class="container-fluid">
+            <div class="row">
+                <div id="div_tools" class="col-1 text-center">
+                    <h6>Tool bar</h6>
+                    <button id="btnSex" class="btn btn-outline-secondary btn-sm ">SEX</button>
+                    <br>
+                    <br>
+                    <button id="btnBoth" class="btn btn-outline-secondary btn-sm ">BOTH</button>
+                    <br>
+                    <br>
+                    <button id="btnAge" class="btn btn-outline-secondary btn-sm ">AGES</button>
+                    <br>
+                    <br>
+                    <button id="btnPlay"type="button" class="btn btn-outline-success">Play</button>
+                    <button id="btnPlay"type="button" class="btn btn-outline-danger">Stop</button>
+                    <br>
+                    <br>
+                    <h6>Select year:</h6>
+                    <select id="selectYear" name="year"></select>
+                    <h6>Set velocity:</h6>
+                    <select id="selectVelocity" name="year">
+                        <option value="1000">x1.0</option>
+                        <option value="750">x0.75</option>
+                        <option value="500">x0.5</option>
+                    </select>
+                </div>
+                <div id="div_map" class="col-8">
+                    <div id="map"></div>
+                    <div id="canarymap"></div>
+                </div>
+                <div class="col-3">
+                    <div id=div_mode>
+                        <h6>Data mode</h6>
+                        <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                          <a id="btnRelative" class="nav-link active" aria-current="page" href="#">Relative</a>
+                        </li>
+                        <li class="nav-item">
+                          <a id="btnAbsolute" class="nav-link" href="#">Absolute</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div id="box_explorer">
+                        <h6>Explore</h6>
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a id="btnStats" class="nav-link active" aria-current="page" href="#">Stats</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="btnChart" class="nav-link" href="#">Chart</a>
+                            </li>
+                        </ul>
+                        <div id="div_explore">
+                            <div >
+                                <ul id=div_stats class="list-group">
+                                    <a id="mer" class="list-group-item" href="#">The most equal region</a>
+                                    <a id="ler" class="list-group-item" href="#">The less equal region</a>
+                                    <a id="rmu" class="list-group-item" href="#">Region with more unemployment</a>
+                                    <a id="rlu" class="list-group-item" href="#">Region with less unemployment</a>
+                                    <a id="rmyu" class="list-group-item" href="#">Region with more young unemployment</a>
+                                    <a id="rlyu" class="list-group-item" href="#">Region with less young unemployment</a>
+                                </ul>
+                            </div>
+                            <div id=div_chart>
+                                <div id="chart">
+                                    <p>Just a chart</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider" class="slidecontainer">
+                        <input type="range" min="2007" max="2020" value="2013" class="slider" id="sliderYear">
+                      </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
