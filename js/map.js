@@ -1,3 +1,9 @@
+//Projection
+proj4.defs('EPSG:1000','+proj=laea +lat_0=40 +lon_0=-5 +x_0=0 +y_0=0 +ellps=GRS80'+
+'+towgs84=0,0,0,0,0,0,0 +units=m +no_defs');
+
+ol.proj.proj4.register(proj4);
+
 //Styles
 const noSpainStyle = new ol.style.Style({
     fill: new ol.style.Fill({color:[200, 200, 200, 255]}),
@@ -14,8 +20,8 @@ const SpainStyle = new ol.style.Style({
 //Layers
 const spain = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/spain.geojson',
-        format: new ol.format.GeoJSON()
+        url: 'CARTOGRAPHY/spain1000.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style: SpainStyle,
     name:'spain'
@@ -23,8 +29,8 @@ const spain = new ol.layer.Vector({
 
 const africa = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/africa.geojson',
-        format: new ol.format.GeoJSON(),
+        url: 'CARTOGRAPHY/africa1000.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
     }),
     style: noSpainStyle,
     name:'africa'
@@ -32,8 +38,8 @@ const africa = new ol.layer.Vector({
 
 const andorra = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/andorra.geojson',
-        format: new ol.format.GeoJSON(),
+        url: 'CARTOGRAPHY/andorra1000.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
     }),
     style:noSpainStyle,
     name:'andorra'
@@ -50,8 +56,8 @@ const canarias = new ol.layer.Vector({
 
 const europe = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/europe.geojson',
-        format: new ol.format.GeoJSON(),
+        url: 'CARTOGRAPHY/europe1000.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
     }),
     style:noSpainStyle,
     name:'europe'
@@ -64,6 +70,15 @@ const centroids = new ol.layer.Vector({
 var listenerKey = spain.getSource().on('change', function(e){
 
     if(spain.getSource().getState() == 'ready'){
+
+        extent = (spain.getSource().getExtent());
+
+        center = ol.extent.getCenter(extent);
+
+        console.log(center);
+        console.log([center[0]+1000, center[1]]);
+
+        map.getView().setCenter([center[0]-80000, center[1]]);
         
         spain.getSource().getFeatures().forEach(feature => {
             
@@ -119,8 +134,9 @@ function mapMain(){
     map = new ol.Map({
         layers: [andorra, europe, africa, spain],
         view: new ol.View({
-        center: ol.proj.fromLonLat([-3.8, 39.5]),
-        zoom: 6.1
+        center: [0,0],
+        zoom: 6.5,
+        projection: ol.proj.get('EPSG:1000')
         }),
         controls:[],
         interactions:[],

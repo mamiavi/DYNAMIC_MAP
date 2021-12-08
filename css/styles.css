@@ -51,7 +51,7 @@ h6 {
 #map{
   padding: 3px;
   width: 100%;
-  height: 580px;
+  height: 600px;
   z-index: 10;
   border-style: solid;
   border-radius: 10px;
@@ -60,7 +60,7 @@ h6 {
 
 #canarymap{
   position: absolute;
-  top: 495px;
+  top: 530px;
   left: 125px;
   width: 265px;
   height: 120px;
