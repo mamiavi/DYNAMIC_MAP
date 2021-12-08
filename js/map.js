@@ -75,10 +75,7 @@ var listenerKey = spain.getSource().on('change', function(e){
 
         center = ol.extent.getCenter(extent);
 
-        console.log(center);
-        console.log([center[0]+1000, center[1]]);
-
-        map.getView().setCenter([center[0]-80000, center[1]]);
+        map.getView().setCenter([center[0]-90000, center[1]-10000]);
         
         spain.getSource().getFeatures().forEach(feature => {
             
@@ -104,6 +101,13 @@ var listenerKey = spain.getSource().on('change', function(e){
 var listenerKey = canarias.getSource().on('change', function(e){
 
     if(canarias.getSource().getState() == 'ready'){
+
+        extent = (canarias.getSource().getExtent());
+
+        center = ol.extent.getCenter(extent);
+
+        canarymap.getView().setCenter(center);
+
         canarias.getSource().getFeatures().forEach(feature => {
             bbox = feature.getGeometry().getExtent();
             centroid = ol.proj.toLonLat(ol.extent.getCenter(bbox));
@@ -146,7 +150,7 @@ function mapMain(){
     canarymap = new ol.Map({
         layers: [canarias],
         view: new ol.View({
-        center: ol.proj.fromLonLat([-15.7, 28.5]),
+        center: [0,0],
         zoom: 6.1
         }),
         target: 'canarymap',

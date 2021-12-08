@@ -47,8 +47,38 @@ h6 {
   background-color: white;
 }
 
-
 #map{
+  padding: 3px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  border-style: solid;
+  border-radius: 10px;
+  background-color:white;
+}
+
+#canarymap{
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  width: 250px;
+  height: 120px;
+  border-style: solid;
+  border-radius: 8px;
+  z-index: 9;
+}
+
+#slider{
+  position:absolute;
+  top: 580px;
+  left: 800px;
+  top: 95%;
+  left:75%;
+  z-index: 9;
+}
+
+
+/* #map{
   padding: 3px;
   width: 100%;
   height: 600px;
@@ -70,8 +100,8 @@ h6 {
 
 #slider{
   position:absolute;
-  /* top: 580px;
-  left: 800px; */
+  top: 580px;
+  left: 800px;
   top: 90%;
   left:58%;
-}
+} */
