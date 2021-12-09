@@ -20,7 +20,7 @@ const SpainStyle = new ol.style.Style({
 //Layers
 const spain = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/spain1000.geojson',
+        url: 'CARTOGRAPHY/spain.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style: SpainStyle,
@@ -29,7 +29,7 @@ const spain = new ol.layer.Vector({
 
 const africa = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/africa1000.geojson',
+        url: 'CARTOGRAPHY/africa.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
     }),
     style: noSpainStyle,
@@ -56,7 +56,7 @@ const canarias = new ol.layer.Vector({
 
 const europe = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/europe1000.geojson',
+        url: 'CARTOGRAPHY/europe.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
     }),
     style:noSpainStyle,
@@ -66,6 +66,7 @@ const europe = new ol.layer.Vector({
 const centroids = new ol.layer.Vector({
     name: 'centroids'
 });
+
 
 var listenerKey = spain.getSource().on('change', function(e){
 

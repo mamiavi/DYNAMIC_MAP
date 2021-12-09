@@ -1,0 +1,23 @@
+{
+"type": "FeatureCollection",
+"name": "positions1000",
+"features": [
+{ "type": "Feature", "properties": { "name": "Madrid" }, "geometry": { "type": "Point", "coordinates": [ 108995.324, 56467.9218 ] } },
+{ "type": "Feature", "properties": { "name": "Cataluña" }, "geometry": { "type": "Point", "coordinates": [ 534363.50554, 216685.59139 ] } },
+{ "type": "Feature", "properties": { "name": "Andalucía" }, "geometry": { "type": "Point", "coordinates": [ 43287.4141, -285677.8965 ] } },
+{ "type": "Feature", "properties": { "name": "Extremadur" }, "geometry": { "type": "Point", "coordinates": [ -100931.82713, -87004.04157 ] } },
+{ "type": "Feature", "properties": { "name": "Castilla L" }, "geometry": { "type": "Point", "coordinates": [ 19419.19333, 209692.99729 ] } },
+{ "type": "Feature", "properties": { "name": "Castilla M" }, "geometry": { "type": "Point", "coordinates": [ 212167.67782, -58203.26174 ] } },
+{ "type": "Feature", "properties": { "name": "Valencia" }, "geometry": { "type": "Point", "coordinates": [ 370034.621, -57563.47156 ] } },
+{ "type": "Feature", "properties": { "name": "Galicia" }, "geometry": { "type": "Point", "coordinates": [ -241545.36846, 318142.58724 ] } },
+{ "type": "Feature", "properties": { "name": "Baleares" }, "geometry": { "type": "Point", "coordinates": [ 662505.29941, 45645.25441 ] } },
+{ "type": "Feature", "properties": { "name": "Ceuta" }, "geometry": { "type": "Point", "coordinates": [ 39783.89833, -441291.8272 ] } },
+{ "type": "Feature", "properties": { "name": "Melilla" }, "geometry": { "type": "Point", "coordinates": [ 204735.77932, -480503.99349 ] } },
+{ "type": "Feature", "properties": { "name": "Asturias" }, "geometry": { "type": "Point", "coordinates": [ -76629.88069, 370784.88395 ] } },
+{ "type": "Feature", "properties": { "name": "Cantabria" }, "geometry": { "type": "Point", "coordinates": [ 77181.62792, 359104.39064 ] } },
+{ "type": "Feature", "properties": { "name": "Pais Vasco" }, "geometry": { "type": "Point", "coordinates": [ 190335.83292, 350699.10881 ] } },
+{ "type": "Feature", "properties": { "name": "Navarra" }, "geometry": { "type": "Point", "coordinates": [ 272707.84966, 304233.82232 ] } },
+{ "type": "Feature", "properties": { "name": "Aragón" }, "geometry": { "type": "Point", "coordinates": [ 357595.32856, 176839.7779 ] } },
+{ "type": "Feature", "properties": { "name": "La Rioja" }, "geometry": { "type": "Point", "coordinates": [ 201499.39244, 259805.59438 ] } }
+]
+}
