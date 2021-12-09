@@ -34,6 +34,7 @@
         <div id="div_title">
             <h4>Unemployment evolution in Spain</h4>
         </div>
+        <br id="space">
         <div id="div_body" class="container-fluid">
             <div class="row">
                 <div id="div_tools" class="col-1 text-center">
@@ -41,18 +42,16 @@
                     <button id="btnSex" class="btn btn-outline-secondary btn-sm ">SEX</button>
                     <br>
                     <br>
-                    <button id="btnBoth" class="btn btn-outline-secondary btn-sm ">BOTH</button>
-                    <br>
-                    <br>
                     <button id="btnAge" class="btn btn-outline-secondary btn-sm ">AGES</button>
+                    <br>
+                    <br>
+                    <button id="btnBoth" class="btn btn-outline-secondary btn-sm ">BOTH</button>
                     <br>
                     <br>
                     <button id="btnPlay"type="button" class="btn btn-outline-success">Play</button>
                     <button id="btnPlay"type="button" class="btn btn-outline-danger">Stop</button>
                     <br>
                     <br>
-                    <h6>Select year:</h6>
-                    <select id="selectYear" name="year"></select>
                     <h6>Set velocity:</h6>
                     <select id="selectVelocity" name="year">
                         <option value="1000">x1.0</option>
@@ -63,9 +62,11 @@
                 <div id="div_map" class="col-8">
                     <div id="map">
                         <div id="canarymap"></div>
-                        <div id="slider" class="slidecontainer">
+                        <div id="slider">
                             <input type="range" min="2007" max="2020" value="2013" class="slider" id="sliderYear">
                         </div>
+                        <div id="scaleline"></div>
+                        <div id="attributions">The data is from the INE</div>
                     </div>
                 </div>
                 <div class="col-3">
@@ -96,10 +97,10 @@
                                 <ul id=div_stats class="list-group">
                                     <a id="mer" class="list-group-item" href="#">The most equal region</a>
                                     <a id="ler" class="list-group-item" href="#">The less equal region</a>
-                                    <a id="rmu" class="list-group-item" href="#">Region with more unemployment</a>
-                                    <a id="rlu" class="list-group-item" href="#">Region with less unemployment</a>
-                                    <a id="rmyu" class="list-group-item" href="#">Region with more young unemployment</a>
-                                    <a id="rlyu" class="list-group-item" href="#">Region with less young unemployment</a>
+                                    <a id="rmu" class="list-group-item" href="#">Region with highest unemployment</a>
+                                    <a id="rlu" class="list-group-item" href="#">Region with lower unemployment</a>
+                                    <a id="rmyu" class="list-group-item" href="#">Region with highest unemployment among youth</a>
+                                    <a id="rlyu" class="list-group-item" href="#">Region with lowest unemployment among youth</a>
                                 </ul>
                             </div>
                             <div id=div_chart>

@@ -7,7 +7,6 @@ let VEL = "1000";
 let sliderYear;
 let selector;
 let symbols = {};
-var positions = [];
 
 function mainInit(){
 
@@ -15,14 +14,9 @@ function mainInit(){
 
 	showStats();
 
-	selector = document.getElementById("selectYear");
-
 	for(var i = 2020; i>2006;i--){
 		years.push(i);
-		var option = document.createElement("option");
-		option.value=i;
-		option.innerHTML=i;
-		selector.appendChild(option);
+
 	}
 
 	YEAR = years[0];
@@ -62,7 +56,6 @@ window.onload = function() {
 	addSymbols(MODE,CHART_TYPE,YEAR)});
 
 
-	selector = document.getElementById("selectYear").addEventListener("click", function(){YEAR=this.value;});
 	sliderYear = document.getElementById("sliderYear").oninput = function(){YEAR=this.value;};
 
 	vel_selector = document.getElementById("selectVelocity").addEventListener("click", function(){VEL=this.value;})

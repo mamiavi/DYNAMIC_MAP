@@ -6,7 +6,7 @@ ol.proj.proj4.register(proj4);
 
 //Styles
 const noSpainStyle = new ol.style.Style({
-    fill: new ol.style.Fill({color:[200, 200, 200, 255]}),
+    fill: new ol.style.Fill({color:[220, 220, 220, 255]}),
     stroke: new ol.style.Stroke({
     color: 'black'})
 });
@@ -17,10 +17,10 @@ const SpainStyle = new ol.style.Style({
         color: 'black'})
 });
 
-//Layers
+//Layers: SImplified to 1000 meters and deleted the decimals. Canarias simplified 0.01 degrees
 const spain = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/spain.geojson',
+        url: 'CARTOGRAPHY/spainSimplified.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style: SpainStyle,
@@ -29,8 +29,8 @@ const spain = new ol.layer.Vector({
 
 const africa = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/africa.geojson',
-        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
+        url: 'CARTOGRAPHY/africaSimplified.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style: noSpainStyle,
     name:'africa'
@@ -39,7 +39,7 @@ const africa = new ol.layer.Vector({
 const andorra = new ol.layer.Vector({
     source: new ol.source.Vector({
         url: 'CARTOGRAPHY/andorra1000.geojson',
-        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:noSpainStyle,
     name:'andorra'
@@ -47,7 +47,7 @@ const andorra = new ol.layer.Vector({
 
 const canarias = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/canarias.geojson',
+        url: 'CARTOGRAPHY/canariasSimplified.geojson',
         format: new ol.format.GeoJSON(),
     }),
     style:SpainStyle,
@@ -56,15 +56,19 @@ const canarias = new ol.layer.Vector({
 
 const europe = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/europe.geojson',
-        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')}),
+        url: 'CARTOGRAPHY/europeSimplified.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:noSpainStyle,
     name:'europe'
 });
 
-const centroids = new ol.layer.Vector({
-    name: 'centroids'
+const positions = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        url: 'CARTOGRAPHY/positions1000.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
+    }),
+    name: 'positions'
 });
 
 
@@ -78,22 +82,6 @@ var listenerKey = spain.getSource().on('change', function(e){
 
         map.getView().setCenter([center[0]-90000, center[1]-10000]);
         
-        spain.getSource().getFeatures().forEach(feature => {
-            
-            bbox = feature.getGeometry().getExtent();
-            centroid = ol.proj.toLonLat(ol.extent.getCenter(bbox));
-
-            name_region = feature.get('name');
-
-            var coords = new ol.Feature({
-                name: name_region,
-                geometry: new ol.geom.Point(ol.proj.fromLonLat(centroid))
-            })
-            
-            positions.push(coords);
-
-        });
-
     }else{
         console.log('Spain source is loading');
     }
@@ -109,27 +97,8 @@ var listenerKey = canarias.getSource().on('change', function(e){
 
         canarymap.getView().setCenter(center);
 
-        canarias.getSource().getFeatures().forEach(feature => {
-            bbox = feature.getGeometry().getExtent();
-            centroid = ol.proj.toLonLat(ol.extent.getCenter(bbox));
-
-            var coords = new ol.Feature({
-                name:'Canarias',
-                geometry: new ol.geom.Point(ol.proj.fromLonLat(centroid))
-            })
-
-            positions.push(coords);
-            
-        });
-
-        var position = new ol.source.Vector({
-            features: positions
-        });
-        
-        centroids.setSource(position);
-        
-        map.addLayer(centroids)
-        canarymap.addLayer(centroids);
+    }else{
+        console.log('Canary source is loading')
     }
 });
 
@@ -137,19 +106,19 @@ var listenerKey = canarias.getSource().on('change', function(e){
 function mapMain(){
 
     map = new ol.Map({
-        layers: [andorra, europe, africa, spain],
+        layers: [andorra, europe, africa, spain, positions],
         view: new ol.View({
         center: [0,0],
         zoom: 6.5,
         projection: ol.proj.get('EPSG:1000')
         }),
-        controls:[],
+        controls:[new ol.control.ScaleLine({target: document.getElementById("scaleline")})],
         interactions:[],
         target: 'map'
     });
 
     canarymap = new ol.Map({
-        layers: [canarias],
+        layers: [canarias, positions],
         view: new ol.View({
         center: [0,0],
         zoom: 6.1

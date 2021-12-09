@@ -1,8 +1,8 @@
 
 function addSymbols(MODE, CHART_TYPE, YEAR){
 
-  if(centroids.getSource().getState() === 'ready'){
-    centroids.getSource().getFeatures().forEach(feature => {
+  if(positions.getSource().getState() === 'ready'){
+    positions.getSource().getFeatures().forEach(feature => {
 
       name_region = feature.get('name');
 

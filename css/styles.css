@@ -1,7 +1,9 @@
 body{
   background-image: url('/img/background.png');
   padding-left: 1%;
+  padding-top: 1%;
 }
+
 
 #div_title{
   background-color: white;
@@ -23,6 +25,10 @@ body{
 
 h4 {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 h6 {
@@ -39,6 +45,7 @@ h6 {
 }
 
 #box_explorer{
+  height: 483px;
   padding: 10px;
   border-style: solid;
   border-collapse: separate;
@@ -54,7 +61,7 @@ h6 {
   position: relative;
   border-style: solid;
   border-radius: 10px;
-  background-color:white;
+  background-color:rgb(210, 220, 255);
 }
 
 #canarymap{
@@ -70,38 +77,25 @@ h6 {
 
 #slider{
   position:absolute;
-  top: 580px;
-  left: 800px;
-  top: 95%;
+  top: 88%;
   left:75%;
   z-index: 9;
 }
 
-
-/* #map{
-  padding: 3px;
-  width: 100%;
-  height: 600px;
-  z-index: 10;
-  border-style: solid;
-  border-radius: 10px;
-  background-color:white;
-}
-
-#canarymap{
-  position: absolute;
-  top: 530px;
-  left: 125px;
-  width: 265px;
-  height: 120px;
-  border-style: solid;
-  border-radius: 8px;
-}
-
-#slider{
+#scaleline {
   position:absolute;
-  top: 580px;
-  left: 800px;
-  top: 90%;
-  left:58%;
-} */
+  top: 100%;
+  left:80%;
+  z-index: 9;
+}
+
+#attributions{
+  font-size: 8px;
+  position:absolute;
+  top: 97%;
+  left:35%;
+  z-index: 9;
+}
+
+
+
