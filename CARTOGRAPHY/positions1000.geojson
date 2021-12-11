@@ -15,7 +15,7 @@
 { "type": "Feature", "properties": { "name": "Melilla" }, "geometry": { "type": "Point", "coordinates": [ 204735, -480503 ] } },
 { "type": "Feature", "properties": { "name": "Asturias, Principado de" }, "geometry": { "type": "Point", "coordinates": [ -76629, 370784 ] } },
 { "type": "Feature", "properties": { "name": "Cantabria" }, "geometry": { "type": "Point", "coordinates": [ 77181, 359104 ] } },
-{ "type": "Feature", "properties": { "name": "Pais Vasco" }, "geometry": { "type": "Point", "coordinates": [ 190335, 350699 ] } },
+{ "type": "Feature", "properties": { "name": "País Vasco" }, "geometry": { "type": "Point", "coordinates": [ 190335, 350699 ] } },
 { "type": "Feature", "properties": { "name": "Navarra, Comunidad Foral de" }, "geometry": { "type": "Point", "coordinates": [ 272707, 304233 ] } },
 { "type": "Feature", "properties": { "name": "Aragón" }, "geometry": { "type": "Point", "coordinates": [ 357595, 176839 ] } },
 { "type": "Feature", "properties": { "name": "Rioja, La" }, "geometry": { "type": "Point", "coordinates": [ 201499, 259805 ] } },

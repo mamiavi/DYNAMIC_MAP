@@ -6,16 +6,9 @@ function playAnimation(){
 
             addSymbols(MODE, CHART_TYPE, year);
 
-            sliderYear.value = year;//TODO: know why this is not working
+            document.getElementById("sliderYear").value=year;
 
-            for(var i=0; i<selector.options.length; i++){
-    
-                if(selector.options[i].value == year){
-                    selector.options[i].selected = true;
-                }else{
-                    selector.options[i].selected = false;
-                }
-            }
+            setBubble(document.getElementById("sliderYear"), document.getElementById("bubble"));
             
         }, i * VEL);
       });

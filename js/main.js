@@ -4,8 +4,6 @@ let YEAR = null;
 let MODE = null;
 let years = [];
 let VEL = "1000";
-let sliderYear;
-let selector;
 let symbols = {};
 
 function mainInit(){
@@ -55,8 +53,10 @@ window.onload = function() {
 	this.className = "nav-link active";
 	addSymbols(MODE,CHART_TYPE,YEAR)});
 
-
-	sliderYear = document.getElementById("sliderYear").oninput = function(){YEAR=this.value;};
+	document.getElementById("sliderYear").addEventListener("input", function(){
+		addSymbols(MODE, CHART_TYPE, this.value);
+		setBubble(this, document.getElementById("bubble"));
+	});
 
 	vel_selector = document.getElementById("selectVelocity").addEventListener("click", function(){VEL=this.value;})
 

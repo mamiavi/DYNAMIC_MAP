@@ -97,5 +97,26 @@ h6 {
   z-index: 9;
 }
 
+.bubble {
+  font-size: small;
+  background: white;
+  color: black;
+  padding: 2px 5px;
+  position: absolute;
+  border-radius: 4px;
+  left:0px;
+  top:-25px;
+  transform: translateX(-50%);
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  top: -25px;
+  left:0px;
+}
+
 
 
