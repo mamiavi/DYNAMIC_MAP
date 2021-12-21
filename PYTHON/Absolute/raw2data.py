@@ -1,4 +1,5 @@
 import os
+import random
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -42,47 +43,47 @@ for i in range(8,len(data)-8,61): #Each region loop
 
         final_data.extend([round(element*1000) for element in mean_values[15:]])
         
-        #AGES
-        path = 'SYMBOLS/Absolute/AGE/'+year.strip()+'/'
-        if(not os.path.exists(path)):
-            os.makedirs(path)
+        # #AGES
+        # path = 'SYMBOLS/Absolute/AGE/'+year.strip()+'/'
+        # if(not os.path.exists(path)):
+        #     os.makedirs(path)
 
-        data_t = final_data[0:len(final_data)-1:3]
+        # data_t = final_data[0:len(final_data)-1:3]
 
-        y_t = np.array(data_t)
+        # y_t = np.array(data_t)
 
-        #Max for the AGES symbol
-        if(np.max(y_t)>max):
-            max = np.max(y_t)
+        # #Max for the AGES symbol
+        # if(np.max(y_t)>max):
+        #     max = np.max(y_t)
 
-        fig_1, axes_1 = plt.subplots()
+        # fig_1, axes_1 = plt.subplots()
         
-        ages = ['16 to 19', '20 to 24', '25 to 54', '55 to 65']
+        # ages = ['16 to 19', '20 to 24', '25 to 54', '55 to 65']
 
-        axes_1.set_ylim([0,max])
+        # axes_1.set_ylim([0,max])
 
-        colorsm = [(0.75,0.75,1.0), (0.5,0.5,1.0), (0.25,0.25,1.0), (0.0,0.0,1.0)]
+        # colorsm = [(0.75,0.75,1.0), (0.5,0.5,1.0), (0.25,0.25,1.0), (0.0,0.0,1.0)]
 
-        axes_1.bar(ages, y_t, color=colorsm)
+        # axes_1.bar(ages, y_t, color=colorsm)
         
 
-        axes_1.set_xticklabels([])
-        axes_1.set_yticklabels([])
-        axes_1.spines['top'].set_visible(False)
-        axes_1.spines['right'].set_visible(False)
-        axes_1.spines['bottom'].set_visible(False)
-        axes_1.spines['left'].set_visible(False)
-        axes_1.get_xaxis().set_ticks([])
-        axes_1.get_yaxis().set_ticks([])
+        # axes_1.set_xticklabels([])
+        # axes_1.set_yticklabels([])
+        # axes_1.spines['top'].set_visible(False)
+        # axes_1.spines['right'].set_visible(False)
+        # axes_1.spines['bottom'].set_visible(False)
+        # axes_1.spines['left'].set_visible(False)
+        # axes_1.get_xaxis().set_ticks([])
+        # axes_1.get_yaxis().set_ticks([])
         
-        axes_1.spines['right'].set_visible(False)
-        axes_1.spines['left'].set_visible(False)
-        axes_1.get_yaxis().set_ticks([])
+        # axes_1.spines['right'].set_visible(False)
+        # axes_1.spines['left'].set_visible(False)
+        # axes_1.get_yaxis().set_ticks([])
 
-        plt.subplots_adjust(wspace=0, hspace=0)
+        # plt.subplots_adjust(wspace=0, hspace=0)
         
-        plt.savefig('./SYMBOLS/Absolute/AGE/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
-        plt.clf()
+        # plt.savefig('./SYMBOLS/Absolute/AGE/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        # plt.clf()
 
 
         # #BOTH
@@ -149,20 +150,21 @@ for i in range(8,len(data)-8,61): #Each region loop
 
         #SEX
 
-        # path = 'SYMBOLS/Absolute/SEX/'+year.strip()+'/'
-        # if(not os.path.exists(path)):
-        #     os.makedirs(path)
+        path = 'SYMBOLS/Absolute/SEX/'+year.strip()+'/'
+        if(not os.path.exists(path)):
+            os.makedirs(path)
 
-        # data_m =  sum(final_data[1::3])
-        # data_f = sum(final_data[2::3])
+        data_m =  sum(final_data[1::3])
+        data_f = sum(final_data[2::3])
 
-        # fig_1, axes_1 = plt.subplots()
+        fig_1, axes_1 = plt.subplots()
         
-        # axes_1.pie([data_m, data_f], startangle=90, colors=['b','m'])
-        # axes_1.axis('equal')
-        
-        # plt.savefig('./SYMBOLS/Absolute/SEX/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
-        # plt.clf()
+        axes_1.pie([data_m, data_f], startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)], radius=data_f+data_m)
+        axes_1.axis('equal')
+        fig = plt.gcf()
+        fig.set_size_inches((data_m+data_f)/100000,(data_f+data_m)/100000)
+        plt.savefig('./SYMBOLS/Absolute/SEX/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        plt.clf()
 
 
 print('DONE!')

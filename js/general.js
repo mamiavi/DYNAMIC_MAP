@@ -6,15 +6,16 @@ function setBubble(range, bubble){
     bubble.innerHTML = val;
   
     bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
-}
+};
 
 function clearSelection(){
 
-}
+};
 
-function selectRegion(statCode){
-    console.log('Me has pulsado!', statCode);
-}
+function selectRegion(stat){
+    console.log("Me has pulsado!" + stat);
+    //Here I need to find the region that matched that selected stat
+};
 
 function showChart(){
     div_stats.style.display = "none";
@@ -24,24 +25,6 @@ function showChart(){
 function showStats(){
     div_chart.style.display = "none"; 
     div_stats.style.display = "block";
-
-    //Create the predefine sentences: Most equal region, Less equal region, Less unemployment, More unemplyment
-    //FIrst add a onClick for each item in the list
-    //That onClick must to call a function to clear the possible selected items and or ccaa
-    //That onClick must to call the function to find the ccaa that matchs the query and the select it
-
-    for (var i = 0; i < div_stats.childNodes.length; i++){
-
-        if(div_stats.childNodes[i].id !== undefined){
-            var statCode = div_stats.childNodes[i].id;
-            div_stats.childNodes[i].onclick = function(){
-
-                clearSelection();
-                selectRegion(statCode);
-
-            }
-        }
-    }
 }
 
 function fetchSymbols(){

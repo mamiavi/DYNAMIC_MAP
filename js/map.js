@@ -71,6 +71,13 @@ const positions = new ol.layer.Vector({
     name: 'positions'
 });
 
+const positionsCanary = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        url: 'CARTOGRAPHY/positions4326.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:4326')})
+    })
+})
+
 
 var listenerKey = spain.getSource().on('change', function(e){
 
@@ -118,7 +125,7 @@ function mapMain(){
     });
 
     canarymap = new ol.Map({
-        layers: [canarias, positions],
+        layers: [canarias, positionsCanary],
         view: new ol.View({
         center: [0,0],
         zoom: 6.1

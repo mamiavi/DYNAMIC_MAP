@@ -14,6 +14,20 @@ function addSymbols(MODE, CHART_TYPE, YEAR){
 
     });
   }
+
+  if(positionsCanary.getSource().getState() === 'ready'){
+    positionsCanary.getSource().getFeatures().forEach(feature => {
+      name_region = feature.get('name');
+
+      var CStyle = new ol.style.Style({
+        image: symbols[MODE+CHART_TYPE+YEAR+name_region]
+      });
+
+      feature.setStyle(CStyle);
+
+    })
+  }
+
 }
 
 function displaySexSymbol(){

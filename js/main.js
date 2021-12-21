@@ -12,6 +12,14 @@ function mainInit(){
 
 	showStats();
 
+	div_stats.childNodes.forEach(child => {
+
+        child.onclick = function(){
+            clearSelection();
+            selectRegion(child.id);
+        }
+    });
+
 	for(var i = 2020; i>2006;i--){
 		years.push(i);
 
