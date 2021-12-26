@@ -5,6 +5,7 @@ let MODE = null;
 let years = [];
 let VEL = "1000";
 let symbols = {};
+let stats = {};
 
 function mainInit(){
 
@@ -30,6 +31,9 @@ function mainInit(){
 	years.reverse();
 
 	fetchSymbols();
+
+
+	readStatsFile();
 
 }
 

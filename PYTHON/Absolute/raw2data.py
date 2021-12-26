@@ -86,85 +86,85 @@ for i in range(8,len(data)-8,61): #Each region loop
         # plt.clf()
 
 
-        # #BOTH
+        #BOTH
 
-        # path = 'SYMBOLS/Absolute/BOTH/'+year.strip()+'/'
-        # if(not os.path.exists(path)):
-        #     os.makedirs(path)
-
-        # data_t = final_data[0:len(line)-1:3]
-        # data_m = final_data[1:len(line)-1:3] #male
-        # data_f = final_data[2::3] #female
-
-        # y_t = np.array(data_t)
-        # y_m = np.array(data_m)
-        # y_f = np.array(data_f)
-
-        # #Max for the BOTH symbol
-        # if(np.max(y_m)>max):
-        #     max = np.max(y_m)
-        # elif(np.max(y_f)>max):
-        #     max = np.max(y_f)
-     
-            
-        # fig_1, axes_1 = plt.subplots(figsize=(7,3), nrows=1, ncols=2)
-        
-        # ages = ['16 to 19', '20 to 24', '25 to 54', '55 to 65']
-        # ind = [x for x, _ in enumerate(ages)]
-
-        # axes_1[0].set_xlim([0,max+10])
-        # axes_1[1].set_xlim([0,max+10])
-
-        # colorsm = [(0.75,0.75,1.0), (0.5,0.5,1.0), (0.25,0.25,1.0), (0.0,0.0,1.0)]
-
-        # axes_1[0].barh(ind, y_m, color = colorsm)
-        # axes_1[0].set_yticks(ind, labels=ages)
-
-        # axes_1[0].invert_xaxis()
-        # #axes_1[0].invert_yaxis()
-
-        # colorsf = [(1.0,0.75,0.75), (1.0,0.5,0.5), (1.0,0.25,0.25), (1.0,0.0,0.0)]
-
-        # axes_1[1].barh(ind, y_f, color=colorsf)
-        # axes_1[1].set_yticks(ind, labels=ages)
-
-        # #axes_1[1].invert_yaxis()
-        
-        # for a in axes_1:
-        #     a.set_xticklabels([])
-        #     a.set_yticklabels([])
-        #     a.spines['top'].set_visible(False)
-        #     a.spines['right'].set_visible(False)
-        #     a.spines['bottom'].set_visible(False)
-        #     a.spines['left'].set_visible(False)
-        #     a.get_xaxis().set_ticks([])
-        #     a.get_yaxis().set_ticks([])
-        
-        # axes_1[0].spines['right'].set_visible(True)
-        # axes_1[1].spines['left'].set_visible(True)
-        # axes_1[0].get_yaxis().set_ticks([])
-        # plt.subplots_adjust(wspace=0, hspace=0)
-        
-        # plt.savefig('./SYMBOLS/Absolute/BOTH/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
-        # plt.clf()
-
-        #SEX
-
-        path = 'SYMBOLS/Absolute/SEX/'+year.strip()+'/'
+        path = 'SYMBOLS/Absolute/BOTH/'+year.strip()+'/'
         if(not os.path.exists(path)):
             os.makedirs(path)
 
-        data_m =  sum(final_data[1::3])
-        data_f = sum(final_data[2::3])
+        data_t = final_data[0:len(line)-1:3]
+        data_m = final_data[1:len(line)-1:3] #male
+        data_f = final_data[2::3] #female
 
-        fig_1, axes_1 = plt.subplots()
+        y_t = np.array(data_t)
+        y_m = np.array(data_m)
+        y_f = np.array(data_f)
+
+        #Max for the BOTH symbol
+        if(np.max(y_m)>max):
+            max = np.max(y_m)
+        elif(np.max(y_f)>max):
+            max = np.max(y_f)
+     
+            
+        fig_1, axes_1 = plt.subplots(figsize=(7,3), nrows=1, ncols=2)
         
-        axes_1.pie([data_m, data_f], startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)], radius=data_f+data_m)
-        axes_1.axis('equal')
-        fig = plt.gcf()
-        fig.set_size_inches((data_m+data_f)/100000,(data_f+data_m)/100000)
-        plt.savefig('./SYMBOLS/Absolute/SEX/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        ages = ['16 to 19', '20 to 24', '25 to 54', '55 to 65']
+        ind = [x for x, _ in enumerate(ages)]
+
+        axes_1[0].set_xlim([0,max+10])
+        axes_1[1].set_xlim([0,max+10])
+
+        colorsm = [(0.75,0.75,1.0), (0.5,0.5,1.0), (0.25,0.25,1.0), (0.0,0.0,1.0)]
+
+        axes_1[0].barh(ind, y_m, color = colorsm)
+        axes_1[0].set_yticks(ind, labels=ages)
+
+        axes_1[0].invert_xaxis()
+        #axes_1[0].invert_yaxis()
+
+        colorsf = [(1.0,0.75,0.75), (1.0,0.5,0.5), (1.0,0.25,0.25), (1.0,0.0,0.0)]
+
+        axes_1[1].barh(ind, y_f, color=colorsf)
+        axes_1[1].set_yticks(ind, labels=ages)
+
+        #axes_1[1].invert_yaxis()
+        
+        for a in axes_1:
+            a.set_xticklabels([])
+            a.set_yticklabels([])
+            a.spines['top'].set_visible(False)
+            a.spines['right'].set_visible(False)
+            a.spines['bottom'].set_visible(False)
+            a.spines['left'].set_visible(False)
+            a.get_xaxis().set_ticks([])
+            a.get_yaxis().set_ticks([])
+        
+        axes_1[0].spines['right'].set_visible(True)
+        axes_1[1].spines['left'].set_visible(True)
+        axes_1[0].get_yaxis().set_ticks([])
+        plt.subplots_adjust(wspace=0, hspace=0)
+        
+        plt.savefig('./SYMBOLS/Absolute/BOTH/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
         plt.clf()
+
+        # #SEX
+
+        # path = 'SYMBOLS/Absolute/SEX/'+year.strip()+'/'
+        # if(not os.path.exists(path)):
+        #     os.makedirs(path)
+
+        # data_m =  sum(final_data[1::3])
+        # data_f = sum(final_data[2::3])
+
+        # fig_1, axes_1 = plt.subplots()
+        
+        # axes_1.pie([data_m, data_f], startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)], radius=data_f+data_m)
+        # axes_1.axis('equal')
+        # fig = plt.gcf()
+        # fig.set_size_inches((data_m+data_f)/100000,(data_f+data_m)/100000)
+        # plt.savefig('./SYMBOLS/Absolute/SEX/'+year.strip()+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        # plt.clf()
 
 
 print('DONE!')

@@ -17,7 +17,7 @@ const SpainStyle = new ol.style.Style({
         color: 'black'})
 });
 
-//Layers: SImplified to 1000 meters and deleted the decimals. Canarias simplified 0.01 degrees
+//Layers: Simplified to 1000 meters and deleted the decimals. Canarias simplified 0.01 degrees
 const spain = new ol.layer.Vector({
     source: new ol.source.Vector({
         url: 'CARTOGRAPHY/spainSimplified.geojson',

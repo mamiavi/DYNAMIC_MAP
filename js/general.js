@@ -12,9 +12,16 @@ function clearSelection(){
 
 };
 
+function readStatsFile(){
+    fetch('/DATA/stats.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
+
 function selectRegion(stat){
     console.log("Me has pulsado!" + stat);
     //Here I need to find the region that matched that selected stat
+
 };
 
 function showChart(){
