@@ -6,6 +6,8 @@ let years = [];
 let VEL = "1000";
 let symbols = {};
 let stats = {};
+let selectClick;
+let selectClickCanary;
 
 function mainInit(){
 

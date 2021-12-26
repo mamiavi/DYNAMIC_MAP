@@ -98,7 +98,7 @@ for i in range(8,len(data)-8,61): #Each region loop
 
     for j in range(1,60,4): #Each year loop (Here I have to make my symbol)
 
-        year = data[i+j].split('T')[0]
+        year = data[i+j].split('T')[0].strip()
 
         matrix = []
 
@@ -163,8 +163,6 @@ for i in range(8,len(data)-8,61): #Each region loop
                 dicc['rlyu']['Absolute'][year] = {'region':name_region, 'value':y_unemployment}
         else:
             dicc['rlyu']['Absolute'][year] = {'region':name_region, 'value':y_unemployment}
-
-print(json.dumps(dicc))
 
 
 #Save the json

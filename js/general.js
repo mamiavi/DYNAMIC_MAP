@@ -9,19 +9,29 @@ function setBubble(range, bubble){
 };
 
 function clearSelection(){
-
+    selectClick.getFeatures().clear();
 };
 
 function readStatsFile(){
     fetch('/DATA/stats.json')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => stats = data);
 }
 
 function selectRegion(stat){
-    console.log("Me has pulsado!" + stat);
-    //Here I need to find the region that matched that selected stat
+    
+    clearSelection();
 
+    if(stat != 'mer' && stat != 'ler'){
+        layer = spain.getSource().getFeatures().filter(feature=>
+            feature.get('name') == stats[stat][MODE][YEAR].region);
+        selectClick.getFeatures().push(layer[0])
+    }else{
+        layer = spain.getSource().getFeatures().filter(feature=>
+            feature.get('name') == stats[stat][YEAR].region);
+        selectClick.getFeatures().push(layer[0])
+    }
+    
 };
 
 function showChart(){

@@ -137,31 +137,26 @@ function mapMain(){
 
     //Configure the selection
 
-    let select = null;
-    let selectcanary = null;
-
-    const selectClick = new ol.interaction.Select({
+    selectClick = new ol.interaction.Select({
         condition: ol.events.condition.click
     });
 
-    const selectClickCanary = new ol.interaction.Select({
+    selectClickCanary = new ol.interaction.Select({
         condition: ol.events.condition.click
     });
 
-    select = selectClick;
-    selectcanary = selectClickCanary;
 
-    if (select !== null) {
-        map.addInteraction(select);
-        select.on('select', function (e) {
-            console.log("Has seleccionado algo");
+    if (selectClick !== null) {
+        map.addInteraction(selectClick);
+        selectClick.on('select', function (e) {
+            console.log("Has seleccionado algo", e.target.getFeatures().item(0).getProperties());
         });
     }
 
-    if (selectcanary !== null) {
-        canarymap.addInteraction(selectcanary);
-        selectcanary.on('select', function (e) {
-            console.log("Has seleccionado algo");
+    if (selectClickCanary !== null) {
+        canarymap.addInteraction(selectClickCanary);
+        selectClickCanary.on('select', function (e) {
+            console.log("Has seleccionado algo", e.target.getFeatures().item(0).getProperties());
         });
     }
 
