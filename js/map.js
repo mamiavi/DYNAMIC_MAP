@@ -150,11 +150,13 @@ function mapMain(){
     //Configure the selection
 
     selectClick = new ol.interaction.Select({
+        layers:[spain],
         condition: ol.events.condition.click,
         style: selectedStyle
     });
 
     selectClickCanary = new ol.interaction.Select({
+        layers:[canarias],
         condition: ol.events.condition.click,
         style: selectedStyle
     });
