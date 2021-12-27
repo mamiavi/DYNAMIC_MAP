@@ -68,7 +68,8 @@ window.onload = function() {
 	addSymbols(MODE,CHART_TYPE,YEAR)});
 
 	document.getElementById("sliderYear").addEventListener("input", function(){
-		addSymbols(MODE, CHART_TYPE, this.value);
+		YEAR = this.value;
+		addSymbols(MODE, CHART_TYPE, YEAR);
 		setBubble(this, document.getElementById("bubble"));
 	});
 

@@ -10,7 +10,7 @@
         
         <!--External JS-->
         <script type="text/javascript" src="externalLibs/ol/ol.js"></script>
-        <script type="text/javascript" src="externalLibs/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="externalLibs/bootstrap/js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="externalLibs/proj4/proj4.js"></script>
         <script type="text/javascript" src="externalLibs/proj4/proj4-src.js"></script>
 
@@ -39,13 +39,13 @@
             <div class="row">
                 <div id="div_tools" class="col-1 text-center">
                     <h6>Tool bar</h6>
-                    <button id="btnSex" type="button" class="btn btn-outline-secondary btn-sm " data-bs-toggle="tooltip" data-bs-placement="top" title="Test">SEX</button>
+                    <button id="btnSex" type="button" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex">SEX</button>
                     <br>
                     <br>
-                    <button id="btnAge" class="btn btn-outline-secondary btn-sm ">AGES</button>
+                    <button id="btnAge" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by age groups">AGES</button>
                     <br>
                     <br>
-                    <button id="btnBoth" class="btn btn-outline-secondary btn-sm ">BOTH</button>
+                    <button id="btnBoth" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex and age groups">BOTH</button>
                     <br>
                     <br>
                     <button id="btnPlay"type="button" class="btn btn-outline-success">Play</button>
@@ -67,7 +67,7 @@
                             <output id="bubble" class="bubble"></output>
                         </div>
                         <div id="scaleline"></div>
-                        <div id="attributions">The data is from the INE</div>
+                        <div id="attributions">Author: Manuel Miñambres | Data: Instituto Nacional de Estadística</div>
                     </div>
                 </div>
                 <div class="col-3">
@@ -75,10 +75,10 @@
                         <h6>Data mode</h6>
                         <ul class="nav nav-pills nav-fill">
                         <li class="nav-item">
-                          <a id="btnRelative" class="nav-link active" aria-current="page" href="#">Relative</a>
+                          <a id="btnRelative" class="nav-link active" aria-current="page" href="#" data-toggle="tooltip" title="Unemployment rates">Relative</a>
                         </li>
                         <li class="nav-item">
-                          <a id="btnAbsolute" class="nav-link" href="#">Absolute</a>
+                          <a id="btnAbsolute" class="nav-link" href="#" data-toggle="tooltip" title="Unemployed people">Absolute</a>
                         </li>
                         </ul>
                     </div>
@@ -96,12 +96,12 @@
                         <div id="div_explore">
                             <div >
                                 <ul id=div_stats class="list-group">
-                                    <a id="mer" class="list-group-item" href="#">The most equal region</a>
-                                    <a id="ler" class="list-group-item" href="#">The less equal region</a>
-                                    <a id="rmu" class="list-group-item" href="#">Region with highest unemployment</a>
-                                    <a id="rlu" class="list-group-item" href="#">Region with lower unemployment</a>
-                                    <a id="rmyu" class="list-group-item" href="#">Region with highest unemployment among youth</a>
-                                    <a id="rlyu" class="list-group-item" href="#">Region with lowest unemployment among youth</a>
+                                    <a id="mer" class="list-group-item" href="#" data-toggle="tooltip" title="Region with lowest difference between male and female unemployment">The most equal region</a>
+                                    <a id="ler" class="list-group-item" href="#" data-toggle="tooltip" title="Region with highest difference between male and female unemployment">The less equal region</a>
+                                    <a id="rmu" class="list-group-item" href="#" data-toggle="tooltip" title="Region with highest unemployment rates for both sex and age groups">Region with highest unemployment</a>
+                                    <a id="rlu" class="list-group-item" href="#" data-toggle="tooltip" title="Region with lowest unemployment rates for both sex and age groups">Region with lower unemployment</a>
+                                    <a id="rmyu" class="list-group-item" href="#" data-toggle="tooltip" title="Region with highest unemployment rates for both sex between 19 and 25 years old">Region with highest unemployment among youth</a>
+                                    <a id="rlyu" class="list-group-item" href="#" data-toggle="tooltip" title="Region with lowest unemployment rates for both sex between 19 and 25 years old">Region with lowest unemployment among youth</a>
                                 </ul>
                             </div>
                             <div id=div_chart>

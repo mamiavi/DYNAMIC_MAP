@@ -17,6 +17,13 @@ const SpainStyle = new ol.style.Style({
         color: 'black'})
 });
 
+const selectedStyle = new ol.style.Style({
+    fill: new ol.style.Fill({color: [255,200,200]}),
+    stroke: new ol.style.Stroke({
+        color: 'red'
+    })
+})
+
 //Layers: Simplified to 1000 meters and deleted the decimals. Canarias simplified 0.01 degrees
 const spain = new ol.layer.Vector({
     source: new ol.source.Vector({
@@ -138,26 +145,16 @@ function mapMain(){
     //Configure the selection
 
     selectClick = new ol.interaction.Select({
-        condition: ol.events.condition.click
+        condition: ol.events.condition.click,
+        style: selectedStyle
     });
 
     selectClickCanary = new ol.interaction.Select({
-        condition: ol.events.condition.click
+        condition: ol.events.condition.click,
+        style: selectedStyle
     });
 
-
-    if (selectClick !== null) {
-        map.addInteraction(selectClick);
-        selectClick.on('select', function (e) {
-            console.log("Has seleccionado algo", e.target.getFeatures().item(0).getProperties());
-        });
-    }
-
-    if (selectClickCanary !== null) {
-        canarymap.addInteraction(selectClickCanary);
-        selectClickCanary.on('select', function (e) {
-            console.log("Has seleccionado algo", e.target.getFeatures().item(0).getProperties());
-        });
-    }
+    map.addInteraction(selectClick);
+    canarymap.addInteraction(selectClickCanary);
 
 }

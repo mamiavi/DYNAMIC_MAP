@@ -26,6 +26,7 @@ function selectRegion(stat){
         layer = spain.getSource().getFeatures().filter(feature=>
             feature.get('name') == stats[stat][MODE][YEAR].region);
         selectClick.getFeatures().push(layer[0])
+        
     }else{
         layer = spain.getSource().getFeatures().filter(feature=>
             feature.get('name') == stats[stat][YEAR].region);
@@ -54,7 +55,7 @@ function fetchSymbols(){
         for(var j=0; j<types.length;j++){
             for(var k=0;k<years.length;k++){
                 for(var r=0;r<regions.length;r++){
-
+                    //Here I have to customice the scale depending on the symbol and the mode
                     symbols[modes[i]+types[j]+years[k]+regions[r]] = new ol.style.Icon({
                         src: './SYMBOLS/'+modes[i]+'/'+types[j]+'/'+years[k]+'/'+regions[r]+'.svg',
                         scale: 0.2
