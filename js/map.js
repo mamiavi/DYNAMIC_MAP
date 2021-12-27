@@ -111,6 +111,9 @@ var listenerKey = canarias.getSource().on('change', function(e){
 
         canarymap.getView().setCenter(center);
 
+        loader.style.display = "none";
+        div_map.style.display = "block";
+
     }else{
         console.log('Canary source is loading')
     }
@@ -141,6 +144,8 @@ function mapMain(){
         controls:[],
         interactions:[]
     });
+
+    div_map.style.display = 'none';
 
     //Configure the selection
 

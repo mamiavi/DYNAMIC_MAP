@@ -79,5 +79,8 @@ window.onload = function() {
 	div_stats = document.getElementById("div_stats");
 	div_chart = document.getElementById("div_chart");
 
+	div_map = document.getElementById("map");
+	loader = document.getElementById("loader");
+
 	mainInit();
 };
