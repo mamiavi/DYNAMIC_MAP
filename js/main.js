@@ -2,6 +2,7 @@
 let CHART_TYPE = null;
 let YEAR = null;
 let MODE = null;
+let stop = false;
 let years = [];
 let VEL = "1000";
 let symbols = {};
@@ -46,6 +47,7 @@ window.onload = function() {
 	document.getElementById("btnSex").addEventListener("click", displaySexSymbol);
 
 	document.getElementById("btnPlay").addEventListener("click", playAnimation);
+	document.getElementById("btnStop").addEventListener("click", function(){stop=true;});
 
 	document.getElementById("btnChart").addEventListener("click", function(){
 		this.className = "nav-link active";

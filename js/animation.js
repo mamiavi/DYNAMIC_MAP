@@ -1,16 +1,37 @@
 
+// function playAnimation(){
+//     //Adapt this to use the stop button
+//     years.forEach((year, i) => {    
+//         setTimeout(() => {
+
+//             addSymbols(MODE, CHART_TYPE, year);
+
+//             document.getElementById("sliderYear").value=year;
+
+//             setBubble(document.getElementById("sliderYear"), document.getElementById("bubble"));
+            
+//         }, i * VEL);
+//       });
+
+// }
+
 function playAnimation(){
 
-    years.forEach((year, i) => {    
-        setTimeout(() => {
+    stop = false;
+    var i = 0;
+    
+    var interval = setInterval(function(){
 
-            addSymbols(MODE, CHART_TYPE, year);
+        year = years[i];
 
-            document.getElementById("sliderYear").value=year;
+        addSymbols(MODE, CHART_TYPE, year);
 
-            setBubble(document.getElementById("sliderYear"), document.getElementById("bubble"));
-            
-        }, i * VEL);
-      });
+        document.getElementById("sliderYear").value=year;
+        setBubble(document.getElementById("sliderYear"), document.getElementById("bubble"));
 
+        i++;
+
+        if(i === years.length) clearInterval(interval);
+        if(stop === true) clearInterval(interval);
+    }, 1*VEL);
 }
