@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2021-12-14T09:20:55.470070</dc:date>
+    <dc:date>2022-01-14T17:05:52.365762</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.5.0, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.5.1, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -43,7 +43,7 @@ C 177.410127 309.51873 198.514674 306.190376 218.146789 298.433457
 L 165.438239 165.032526 
 L 165.438239 21.59613 
 z
-" style="fill: #0000ff"/>
+" style="fill: #0000ff; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 218.146789 298.433457 
@@ -54,7 +54,7 @@ C 231.172101 33.247727 198.817514 21.596136 165.438266 21.59613
 L 165.438239 165.032526 
 L 218.146789 298.433457 
 z
-" style="fill: #ff0000"/>
+" style="fill: #ff0000; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="matplotlib.axis_2"/>

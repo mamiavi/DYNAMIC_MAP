@@ -28,7 +28,7 @@ for i in range(8,len(data)-6,16): #Each region loop
 
         fig_1, axes_1 = plt.subplots()
         
-        axes_1.pie([data_m, data_f], startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)])
+        axes_1.pie([data_m, data_f], startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)],wedgeprops={"edgecolor":"0","linewidth":2})
         axes_1.axis('equal')
         
         plt.savefig('./SYMBOLS/Relative/SEX/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
