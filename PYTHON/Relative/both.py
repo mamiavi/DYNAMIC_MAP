@@ -76,7 +76,9 @@ for i in range(6,len(data)-6,16): #Each region loop
         axes_1[0].get_yaxis().set_ticks([])
         plt.subplots_adjust(wspace=0, hspace=0)
         
-        plt.savefig('./SYMBOLS/BOTH/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        #plt.savefig('./SYMBOLS/BOTH/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        plt.savefig('./SYMBOLS/legends/RelativeBoth.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
         plt.clf()
-
+        break
+    break
 print('DONE!')

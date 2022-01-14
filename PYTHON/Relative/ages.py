@@ -44,22 +44,27 @@ for i in range(6,len(data)-6,16): #Each region loop
         axes_1.bar(ages, y_t, color=colorsm)
         
 
-        axes_1.set_xticklabels([])
-        axes_1.set_yticklabels([])
-        axes_1.spines['top'].set_visible(False)
-        axes_1.spines['right'].set_visible(False)
-        axes_1.spines['bottom'].set_visible(False)
-        axes_1.spines['left'].set_visible(False)
-        axes_1.get_xaxis().set_ticks([])
-        axes_1.get_yaxis().set_ticks([])
+        # axes_1.set_xticklabels([])
+        # axes_1.set_yticklabels([])
+        # axes_1.spines['top'].set_visible(False)
+        # axes_1.spines['right'].set_visible(False)
+        # axes_1.spines['bottom'].set_visible(False)
+        # axes_1.spines['left'].set_visible(False)
+        # axes_1.get_xaxis().set_ticks([])
+        # axes_1.get_yaxis().set_ticks([])
         
-        axes_1.spines['right'].set_visible(False)
-        axes_1.spines['left'].set_visible(False)
-        axes_1.get_yaxis().set_ticks([])
+        # axes_1.spines['right'].set_visible(False)
+        # axes_1.spines['left'].set_visible(False)
+        # axes_1.get_yaxis().set_ticks([])
 
         plt.subplots_adjust(wspace=0, hspace=0)
+        plt.xticks(fontsize=17)
+        plt.yticks(fontsize=20)
         
-        plt.savefig('./SYMBOLS/AGE/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        #plt.savefig('./SYMBOLS/AGE/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        plt.savefig('./SYMBOLS/legends/RelativeAge.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
         plt.clf()
+        break
+    break
 
 print('DONE!')

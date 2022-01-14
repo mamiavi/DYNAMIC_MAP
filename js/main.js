@@ -6,6 +6,7 @@ let stop = false;
 let years = [];
 let VEL = "1000";
 let symbols = {};
+let data = null;
 let stats = {};
 let selectClick;
 let selectClickCanary;
@@ -35,9 +36,11 @@ function mainInit(){
 
 	fetchSymbols();
 
+	getData().then(response => {
+		data = response;
+	})
 
 	readStatsFile();
-
 }
 
 window.onload = function() {

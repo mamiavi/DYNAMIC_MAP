@@ -28,10 +28,15 @@ for i in range(8,len(data)-6,16): #Each region loop
 
         fig_1, axes_1 = plt.subplots()
         
-        axes_1.pie([data_m, data_f], startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)],wedgeprops={"edgecolor":"0","linewidth":2})
+        axes_1.pie([data_m, data_f], autopct='%1.0f%%',textprops={'fontsize':30} ,startangle=90, colors=[(0.0,0.0,1.0),(1.0,0.0,0.0)],wedgeprops={"edgecolor":"0","linewidth":2})
         axes_1.axis('equal')
+        plt.legend(['male','female'], prop = {'size':30}, loc="upper center", bbox_to_anchor=(0.5,0))
         
-        plt.savefig('./SYMBOLS/Relative/SEX/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        #plt.savefig('./SYMBOLS/Relative/SEX/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        plt.savefig('./SYMBOLS/legends/RelativeSex.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
         plt.clf()
+
+        break
+    break
 
 print('DONE!')

@@ -26,11 +26,15 @@ function selectRegion(stat){
         layer = spain.getSource().getFeatures().filter(feature=>
             feature.get('name') == stats[stat][MODE][YEAR].region);
         selectClick.getFeatures().push(layer[0])
+        chart(stats[stat][MODE][YEAR].region);
+        showChart();
         
     }else{
         layer = spain.getSource().getFeatures().filter(feature=>
             feature.get('name') == stats[stat][YEAR].region);
         selectClick.getFeatures().push(layer[0])
+        chart(stats[stat][YEAR].region);
+        showChart();
     }
     
 };
@@ -67,3 +71,9 @@ function fetchSymbols(){
         }
     }
 }
+
+async function getData(){
+    const response = await fetch("./DATA/charts.json");
+    const data = await response.json();
+    return data;
+  }

@@ -33,14 +33,23 @@ function addSymbols(MODE, CHART_TYPE, YEAR){
 function displaySexSymbol(){
   CHART_TYPE="SEX";
   addSymbols(MODE, CHART_TYPE, YEAR);
+  if(MODE === 'Relative'){
+    document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeSex.svg'
+  }
 }
 
 function displayAgeSymbol(){
   CHART_TYPE="AGE"
   addSymbols(MODE, CHART_TYPE, YEAR);
+  if(MODE === 'Relative'){
+    document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeAge.svg'
+  }
 }
 
 function displayBothSymbol(){
   CHART_TYPE="BOTH"
   addSymbols(MODE, CHART_TYPE, YEAR);
+  if(MODE === 'Relative'){
+    document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeBoth.svg'
+  }
 }

@@ -9,6 +9,7 @@
         <title>Unemployment dynamic map of Spain</title>
         
         <!--External JS-->
+        <script type="text/javascript" src="externalLibs/echarts/echarts.js"></script>
         <script type="text/javascript" src="externalLibs/ol/ol.js"></script>
         <script type="text/javascript" src="externalLibs/bootstrap/js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="externalLibs/proj4/proj4.js"></script>
@@ -19,6 +20,7 @@
         <link rel="stylesheet" href="externalLibs/bootstrap/css/bootstrap.css">
         
         <!--My JS-->
+        <script type="text/javascript" src="js/chart.js"></script>
         <script type="text/javascript" src="js/general.js"></script>
         <script type="text/javascript" src="js/animation.js"></script>
         <script type="text/javascript" src="js/symbols.js"></script>
@@ -46,6 +48,11 @@
                                 <button id="btnSex" type="button" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex">SEX</button>
                                 <button id="btnAge" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by age groups">AGES</button>
                                 <button id="btnBoth" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex and age groups">BOTH</button>
+                                <br>
+                                <br>
+                                <div id="div_legend">
+                                    <img id="image_legend" src="" style="width: 160px;">
+                                </div>
                             </div>
                             <div id="canarymap"></div>
                             <div id="slider">
@@ -101,7 +108,7 @@
                                 </ul>
                             </div>
                             <div id=div_chart>
-                                <div id="chart">
+                                <div id="chart" style="width: 300px; height: 300px;">
                                     <p>Just a chart</p>
                                 </div>
                             </div>
