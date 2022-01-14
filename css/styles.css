@@ -74,8 +74,8 @@ h6 {
 
 #canarymap{
   position: absolute;
-  top: 80%;
-  left: 0%;
+  top: 78%;
+  left: 2%;
   width: 250px;
   height: 120px;
   border-style: solid;
@@ -85,22 +85,22 @@ h6 {
 
 #slider{
   position:absolute;
-  top: 84.5%;
-  left:75%;
+  top: 84%;
+  left:79%;
   z-index: 9;
 }
 
 #scaleline {
   position:absolute;
   top: 100%;
-  left:80%;
+  left:85%;
   z-index: 9;
 }
 
 #controls{
   position: absolute;
   top: 88%;
-  left:75%;
+  left:85%;
   z-index: 9;
 }
 
@@ -111,6 +111,14 @@ h6 {
   left:35%;
   z-index: 9;
   background-color: rgba(255,255,255,50);
+}
+
+#div_tools{
+  position:absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 9;
+  height: 50%;
 }
 
 .bubble {

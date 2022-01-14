@@ -37,22 +37,16 @@
         <br id="space">
         <div id="div_body" class="container-fluid">
             <div class="row">
-                <div class="col-1">
-                    <div id="div_tools">
-                        <h6>Tool bar</h6>
-                        <button id="btnSex" type="button" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex">SEX</button>
-                        <br>
-                        <br>
-                        <button id="btnAge" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by age groups">AGES</button>
-                        <br>
-                        <br>
-                        <button id="btnBoth" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex and age groups">BOTH</button>
-                    </div>
-                </div>
-                <div class="col-8">
+                <div class="col-9">
                     <div id="div_map">
                         <div id="loader" class="loader"></div>
                         <div id="map">
+                            <div id="div_tools">
+                                <h6>Legend</h6>
+                                <button id="btnSex" type="button" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex">SEX</button>
+                                <button id="btnAge" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by age groups">AGES</button>
+                                <button id="btnBoth" class="btn btn-outline-secondary btn-sm " data-toggle="tooltip" title="Unemployment by sex and age groups">BOTH</button>
+                            </div>
                             <div id="canarymap"></div>
                             <div id="slider">
                                 <input id="sliderYear" type="range" min="2007" max="2020" value="2020" class="slider">

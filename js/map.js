@@ -94,7 +94,7 @@ var listenerKey = spain.getSource().on('change', function(e){
 
         center = ol.extent.getCenter(extent);
 
-        map.getView().setCenter([center[0]-90000, center[1]-10000]);
+        map.getView().setCenter([center[0]-200000, center[1]-10000]);
         
     }else{
         console.log('Spain source is loading');
