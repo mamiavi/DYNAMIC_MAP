@@ -1,19 +1,69 @@
 
 function addSymbols(MODE, CHART_TYPE, YEAR){
 
-  if(positions.getSource().getState() === 'ready'){
-    positions.getSource().getFeatures().forEach(feature => {
+  if(CHART_TYPE === 'SEX'){
 
-      name_region = feature.get('name');
+    positionsSEX.setVisible(true);
+    positionsBOTH.setVisible(false);
+    positionsAGE.setVisible(false);
 
-      var SStyle =  new ol.style.Style({
-        image: symbols[MODE+CHART_TYPE+YEAR+name_region]
+    if(positionsSEX.getSource().getState() === 'ready'){
+      positionsSEX.getSource().getFeatures().forEach(feature => {
+  
+        name_region = feature.get('name');
+  
+        var SStyle =  new ol.style.Style({
+          image: symbols[MODE+CHART_TYPE+YEAR+name_region]
+        });
+  
+        feature.setStyle(SStyle);
+  
       });
-
-      feature.setStyle(SStyle);
-
-    });
+    }
   }
+
+  if(CHART_TYPE === 'AGE'){
+
+    positionsAGE.setVisible(true);
+    positionsBOTH.setVisible(false);
+    positionsSEX.setVisible(false);
+
+    if(positionsAGE.getSource().getState() === 'ready'){
+      positionsAGE.getSource().getFeatures().forEach(feature => {
+  
+        name_region = feature.get('name');
+  
+        var SStyle =  new ol.style.Style({
+          image: symbols[MODE+CHART_TYPE+YEAR+name_region]
+        });
+  
+        feature.setStyle(SStyle);
+  
+      });
+    }
+  }
+
+  if(CHART_TYPE === 'BOTH'){
+
+    positionsBOTH.setVisible(true);
+    positionsSEX.setVisible(false);
+    positionsAGE.setVisible(false);
+
+    if(positionsBOTH.getSource().getState() === 'ready'){
+      positionsBOTH.getSource().getFeatures().forEach(feature => {
+  
+        name_region = feature.get('name');
+  
+        var SStyle =  new ol.style.Style({
+          image: symbols[MODE+CHART_TYPE+YEAR+name_region]
+        });
+  
+        feature.setStyle(SStyle);
+  
+      });
+    }
+  }
+
 
   if(positionsCanary.getSource().getState() === 'ready'){
     positionsCanary.getSource().getFeatures().forEach(feature => {

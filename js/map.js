@@ -79,6 +79,33 @@ const positions = new ol.layer.Vector({
     name: 'positions'
 });
 
+const positionsSEX = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        url: 'CARTOGRAPHY/positionsSEX.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
+    }),
+    style:[],
+    name: 'positionsSEX'
+});
+
+const positionsAGE = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        url: 'CARTOGRAPHY/positionsAGE.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
+    }),
+    style:[],
+    name: 'positionsAGE'
+});
+
+const positionsBOTH = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        url: 'CARTOGRAPHY/positionsBOTH.geojson',
+        format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
+    }),
+    style:[],
+    name: 'positionsBOTH'
+});
+
 const positionsCanary = new ol.layer.Vector({
     source: new ol.source.Vector({
         url: 'CARTOGRAPHY/positions4326.geojson',
@@ -125,7 +152,7 @@ var listenerKey = canarias.getSource().on('change', function(e){
 function mapMain(){
 
     map = new ol.Map({
-        layers: [andorra, europe, africa, spain, positions],
+        layers: [andorra, europe, africa, spain, positionsSEX, positionsAGE, positionsBOTH],
         view: new ol.View({
         center: [0,0],
         zoom: 6.5,

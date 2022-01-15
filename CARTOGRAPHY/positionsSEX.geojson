@@ -12,7 +12,7 @@
 { "type": "Feature", "properties": { "name": "Galicia" }, "geometry": { "type": "Point", "coordinates": [ -238397.636091549298726, 311847.272183098597452 ] } },
 { "type": "Feature", "properties": { "name": "Balears, Illes" }, "geometry": { "type": "Point", "coordinates": [ 662505.0, 45645.0 ] } },
 { "type": "Feature", "properties": { "name": "Ceuta" }, "geometry": { "type": "Point", "coordinates": [ 49225.091725352103822, -447585.727816901402548 ] } },
-{ "type": "Feature", "properties": { "name": "Melilla" }, "geometry": { "type": "Point", "coordinates": [ 214177.091725352103822, -461618.816549295792356 ] } },
+{ "type": "Feature", "properties": { "name": "Melilla" }, "geometry": { "type": "Point", "coordinates": [ 233061.275176056427881, -463192.498503521201201 ] } },
 { "type": "Feature", "properties": { "name": "Asturias, Principado de" }, "geometry": { "type": "Point", "coordinates": [ -76629.0, 370784.0 ] } },
 { "type": "Feature", "properties": { "name": "Cantabria" }, "geometry": { "type": "Point", "coordinates": [ 72459.954137324006297, 359104.0 ] } },
 { "type": "Feature", "properties": { "name": "País Vasco" }, "geometry": { "type": "Point", "coordinates": [ 190335.0, 350699.0 ] } },
