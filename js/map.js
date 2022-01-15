@@ -196,6 +196,8 @@ function mapMain(){
     selectClick.on('select', function(e){
         if(e.target.getFeatures().item(0)){
             showChart();
+            document.getElementById("btnStats").className = "nav-link"
+            document.getElementById("btnChart").className = "nav-link active"
             chart(e.target.getFeatures().item(0).getProperties().name);
         }
     })
@@ -203,6 +205,8 @@ function mapMain(){
     selectClickCanary.on('select', function(e){
         if(e.target.getFeatures().item(0)){
             showChart();
+            document.getElementById("btnStats").className = "nav-link"
+            document.getElementById("btnChart").className = "nav-link active"
             chart(e.target.getFeatures().item(0).getProperties().NAMEUNIT);
         }
     })

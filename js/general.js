@@ -20,6 +20,9 @@ function readStatsFile(){
 
 function selectRegion(stat){
     
+    document.getElementById("btnStats").className = "nav-link";
+    document.getElementById("btnChart").className = "nav-link active";
+
     clearSelection();
 
     if(stat != 'mer' && stat != 'ler'){

@@ -27,6 +27,12 @@ function chart(ccaa){
                 data: Object.values(serie),
                 type: 'line'
                 }
+            ],
+            title: [
+                {
+                    left:'center',
+                    text:ccaa
+                }
             ]
             };
 

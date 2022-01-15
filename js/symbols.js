@@ -1,6 +1,10 @@
 
 function addSymbols(MODE, CHART_TYPE, YEAR){
 
+  document.getElementById("btnStats").className = "nav-link active"
+  document.getElementById("btnChart").className = "nav-link"
+  showStats();
+
   if(CHART_TYPE === 'SEX'){
 
     positionsSEX.setVisible(true);
