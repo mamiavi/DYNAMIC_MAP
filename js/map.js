@@ -75,6 +75,7 @@ const positions = new ol.layer.Vector({
         url: 'CARTOGRAPHY/positions1000.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
+    style:[],
     name: 'positions'
 });
 
@@ -82,7 +83,8 @@ const positionsCanary = new ol.layer.Vector({
     source: new ol.source.Vector({
         url: 'CARTOGRAPHY/positions4326.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:4326')})
-    })
+    }),
+    style:[]
 })
 
 
@@ -163,5 +165,19 @@ function mapMain(){
 
     map.addInteraction(selectClick);
     canarymap.addInteraction(selectClickCanary);
+
+    selectClick.on('select', function(e){
+        if(e.target.getFeatures().item(0)){
+            showChart();
+            chart(e.target.getFeatures().item(0).getProperties().name);
+        }
+    })
+
+    selectClickCanary.on('select', function(e){
+        if(e.target.getFeatures().item(0)){
+            showChart();
+            chart(e.target.getFeatures().item(0).getProperties().NAMEUNIT);
+        }
+    })
 
 }

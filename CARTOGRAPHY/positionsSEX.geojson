@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "positions1000",
+"features": [
+{ "type": "Feature", "properties": { "name": "Madrid, Comunidad de" }, "geometry": { "type": "Point", "coordinates": [ 108995.0, 56467.0 ] } },
+{ "type": "Feature", "properties": { "name": "Cataluña" }, "geometry": { "type": "Point", "coordinates": [ 534363.0, 216685.0 ] } },
+{ "type": "Feature", "properties": { "name": "Andalucía" }, "geometry": { "type": "Point", "coordinates": [ 43287.0, -285677.0 ] } },
+{ "type": "Feature", "properties": { "name": "Extremadura" }, "geometry": { "type": "Point", "coordinates": [ -100931.0, -87004.0 ] } },
+{ "type": "Feature", "properties": { "name": "Castilla y León" }, "geometry": { "type": "Point", "coordinates": [ 19419.0, 209692.0 ] } },
+{ "type": "Feature", "properties": { "name": "Castilla La Mancha" }, "geometry": { "type": "Point", "coordinates": [ 194856.498503521084785, -62924.045862676051911 ] } },
+{ "type": "Feature", "properties": { "name": "Comunitat Valenciana" }, "geometry": { "type": "Point", "coordinates": [ 370034.0, -57563.0 ] } },
+{ "type": "Feature", "properties": { "name": "Galicia" }, "geometry": { "type": "Point", "coordinates": [ -238397.636091549298726, 311847.272183098597452 ] } },
+{ "type": "Feature", "properties": { "name": "Balears, Illes" }, "geometry": { "type": "Point", "coordinates": [ 662505.0, 45645.0 ] } },
+{ "type": "Feature", "properties": { "name": "Ceuta" }, "geometry": { "type": "Point", "coordinates": [ 49225.091725352103822, -447585.727816901402548 ] } },
+{ "type": "Feature", "properties": { "name": "Melilla" }, "geometry": { "type": "Point", "coordinates": [ 214177.091725352103822, -461618.816549295792356 ] } },
+{ "type": "Feature", "properties": { "name": "Asturias, Principado de" }, "geometry": { "type": "Point", "coordinates": [ -76629.0, 370784.0 ] } },
+{ "type": "Feature", "properties": { "name": "Cantabria" }, "geometry": { "type": "Point", "coordinates": [ 72459.954137324006297, 359104.0 ] } },
+{ "type": "Feature", "properties": { "name": "País Vasco" }, "geometry": { "type": "Point", "coordinates": [ 190335.0, 350699.0 ] } },
+{ "type": "Feature", "properties": { "name": "Navarra, Comunidad Foral de" }, "geometry": { "type": "Point", "coordinates": [ 272707.0, 304233.0 ] } },
+{ "type": "Feature", "properties": { "name": "Aragón" }, "geometry": { "type": "Point", "coordinates": [ 357595.0, 176839.0 ] } },
+{ "type": "Feature", "properties": { "name": "Rioja, La" }, "geometry": { "type": "Point", "coordinates": [ 201499.0, 259805.0 ] } },
+{ "type": "Feature", "properties": { "name": "Murcia, Región de" }, "geometry": { "type": "Point", "coordinates": [ 314115.0, -223266.0 ] } }
+]
+}

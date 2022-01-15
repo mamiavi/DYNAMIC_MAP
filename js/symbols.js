@@ -36,6 +36,9 @@ function displaySexSymbol(){
   if(MODE === 'Relative'){
     document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeSex.svg'
   }
+  if(MODE === 'Absolute'){
+    document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeSex.svg'
+  }
 }
 
 function displayAgeSymbol(){
@@ -44,12 +47,18 @@ function displayAgeSymbol(){
   if(MODE === 'Relative'){
     document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeAge.svg'
   }
+  if(MODE === 'Absolute'){
+    document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeAge.svg'
+  }
 }
 
 function displayBothSymbol(){
   CHART_TYPE="BOTH"
   addSymbols(MODE, CHART_TYPE, YEAR);
   if(MODE === 'Relative'){
+    document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeBoth.svg'
+  }
+  if(MODE === 'Absolute'){
     document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeBoth.svg'
   }
 }

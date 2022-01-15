@@ -58,13 +58,13 @@ for i in range(6,len(data)-6,16): #Each region loop
         # axes_1.get_yaxis().set_ticks([])
 
         plt.subplots_adjust(wspace=0, hspace=0)
-        plt.xticks(fontsize=17)
-        plt.yticks(fontsize=20)
+        # plt.xticks(fontsize=17)
+        # plt.yticks(fontsize=20)
         
         #plt.savefig('./SYMBOLS/AGE/'+year+'/'+name_region+'.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
-        plt.savefig('./SYMBOLS/legends/RelativeAge.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
+        plt.savefig('./SYMBOLS/legends/RAge.svg', format="svg", dpi=300, bbox_inches='tight', transparent=True)
         plt.clf()
-        break
-    break
+        
+    
 
 print('DONE!')
