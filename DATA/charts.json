@@ -178,7 +178,7 @@
 ,{"Id":454, "Variable":{"Id":18, "Nombre":"Sexo", "Codigo":""}
 , "Nombre":"Ambos sexos", "Codigo":""}
 ,{"Id":9004, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
-, "Nombre":"Castilla - La Mancha", "Codigo":"08"}
+, "Nombre":"Castilla La Mancha", "Codigo":"08"}
 ,{"Id":15668, "Variable":{"Id":356, "Nombre":"Totales de edad", "Codigo":""}
 , "Nombre":"Total", "Codigo":""}
 ]
