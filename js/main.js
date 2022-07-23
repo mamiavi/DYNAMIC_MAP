@@ -1,5 +1,5 @@
 //Initialize global variables
-let CHART_TYPE = null;
+let CHART_TYPE = 'SEX';
 let YEAR = null;
 let MODE = null;
 let stop = false;
@@ -38,9 +38,13 @@ function mainInit(){
 
 	getData().then(response => {
 		data = response;
+		addSymbols(MODE, CHART_TYPE, YEAR);
+		document.getElementById("image_legend").src = './SYMBOLS/legends/RelativeSex.svg'
 	})
 
 	readStatsFile();
+
+	
 }
 
 window.onload = function() {

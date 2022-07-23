@@ -207,7 +207,7 @@ function mapMain(){
             showChart();
             document.getElementById("btnStats").className = "nav-link"
             document.getElementById("btnChart").className = "nav-link active"
-            chart(e.target.getFeatures().item(0).getProperties().NAMEUNIT);
+            chart(e.target.getFeatures().item(0).getProperties().name);
         }
     })
 
