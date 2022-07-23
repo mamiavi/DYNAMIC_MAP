@@ -30,12 +30,12 @@ function selectRegion(stat){
 
         if(stats[stat][MODE][YEAR].region != 'Canarias'){
             layer = spain.getSource().getFeatures().filter(feature=>
-                feature.get('name') == stats[stat][MODE][YEAR].region);
+                feature.get('name') === stats[stat][MODE][YEAR].region);
             selectClick.getFeatures().push(layer[0]);
         }
-        if(stats[stat][MODE][YEAR].region == 'Canarias'){
+        if(stats[stat][MODE][YEAR].region === 'Canarias'){
             canary_layer = canarias.getSource().getFeatures().filter(feature=>
-                feature.get('name') == stats[stat][MODE][YEAR].region);
+                feature.get('name') === stats[stat][MODE][YEAR].region);
             selectClickCanary.getFeatures().push(canary_layer[0]);
         }
 

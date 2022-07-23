@@ -19,6 +19,41 @@ file = open('/home/manuelm/Documents/UNIVERSIDAD/MASTER/KARLSRUHE/SPACE-TIME VIS
 
 data = file.readlines()
 
+# The most equal region and less equal region has to be calculated with the file DATA_SEX
+
+file_sex = open('/home/manuelm/Documents/UNIVERSIDAD/MASTER/KARLSRUHE/SPACE-TIME VISUALIZATION OF STATISTICAL DATA/DYNAMIC_MAP/DATA/DATA_SEX.csv', 'r', encoding='utf-8')
+
+data_sex = file_sex.readlines()
+
+for i in range(8,len(data_sex)-6, 16):
+    
+    name_region = ' '.join(data_sex[i].strip().split(' ')[1:]).split(';')[0]
+
+    for j in range(1,15):
+        
+        line = data_sex[i+j].split(';')
+        
+        year = line[0].strip()
+
+        man = float(line[1])
+        woman = float(line[2].strip())
+
+        equality = abs(man - woman)
+
+        if(year in dicc['mer'].keys()):
+            if(dicc['mer'][year]['value']>equality):
+                dicc['mer'][year] = {'region':name_region, 'value':equality}
+        else:
+            dicc['mer'][year] = {'region':name_region, 'value':equality}
+        
+
+        if(year in dicc['ler'].keys()):
+            if(dicc['ler'][year]['value']<equality):
+                dicc['ler'][year] = {'region':name_region, 'value':equality}
+        else:
+            dicc['ler'][year] = {'region':name_region, 'value':equality}
+
+
 
 for i in range(6,len(data)-6,16): #Each region loop
 
@@ -34,20 +69,20 @@ for i in range(6,len(data)-6,16): #Each region loop
         data_m = [float(item.replace(',','.')) for item in line[2:len(line)-1:3]] #male
         data_f = [float(item.replace(',','.')) for item in line[3::3]] #female
 
-        equality = mean(list(set(data_m) - set(data_f)))
+        # equality = mean(list(set(data_m) - set(data_f)))
         
-        if(year in dicc['mer'].keys()):
-            if(dicc['mer'][year]['value']>equality):
-                dicc['mer'][year] = {'region':name_region, 'value':equality}
-        else:
-            dicc['mer'][year] = {'region':name_region, 'value':equality}
+        # if(year in dicc['mer'].keys()):
+        #     if(dicc['mer'][year]['value']>equality):
+        #         dicc['mer'][year] = {'region':name_region, 'value':equality}
+        # else:
+        #     dicc['mer'][year] = {'region':name_region, 'value':equality}
         
 
-        if(year in dicc['ler'].keys()):
-            if(dicc['ler'][year]['value']<equality):
-                dicc['ler'][year] = {'region':name_region, 'value':equality}
-        else:
-            dicc['ler'][year] = {'region':name_region, 'value':equality}
+        # if(year in dicc['ler'].keys()):
+        #     if(dicc['ler'][year]['value']<equality):
+        #         dicc['ler'][year] = {'region':name_region, 'value':equality}
+        # else:
+        #     dicc['ler'][year] = {'region':name_region, 'value':equality}
 
 #Region with higher unemployment -> (Relative mode) just the region with more %
 #  of all ages and sexs
