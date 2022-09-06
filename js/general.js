@@ -14,7 +14,7 @@ function clearSelection(){
 };
 
 function readStatsFile(){
-    fetch('/DATA/stats.json')
+    fetch('../DATA/stats.json')
   .then(response => response.json())
   .then(data => stats = data);
 }
@@ -95,7 +95,7 @@ function fetchSymbols(){
 }
 
 async function getData(){
-    const response = await fetch("./DATA/charts.json");
+    const response = await fetch("../DATA/charts.json");
     const data = await response.json();
     return data;
   }

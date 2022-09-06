@@ -27,7 +27,7 @@ const selectedStyle = new ol.style.Style({
 //Layers: Simplified to 1000 meters and deleted the decimals. Canarias simplified 0.01 degrees
 const spain = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/spainSimplified.geojson',
+        url: '../CARTOGRAPHY/spainSimplified.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style: SpainStyle,
@@ -36,7 +36,7 @@ const spain = new ol.layer.Vector({
 
 const africa = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/africaSimplified.geojson',
+        url: '../CARTOGRAPHY/africaSimplified.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style: noSpainStyle,
@@ -45,7 +45,7 @@ const africa = new ol.layer.Vector({
 
 const andorra = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/andorra1000.geojson',
+        url: '../CARTOGRAPHY/andorra1000.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:noSpainStyle,
@@ -54,7 +54,7 @@ const andorra = new ol.layer.Vector({
 
 const canarias = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/canariasSimplified.geojson',
+        url: '../CARTOGRAPHY/canariasSimplified.geojson',
         format: new ol.format.GeoJSON(),
     }),
     style:SpainStyle,
@@ -63,7 +63,7 @@ const canarias = new ol.layer.Vector({
 
 const europe = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/europeSimplified.geojson',
+        url: '../CARTOGRAPHY/europeSimplified.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:noSpainStyle,
@@ -72,7 +72,7 @@ const europe = new ol.layer.Vector({
 
 const positions = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/positions1000.geojson',
+        url: '../CARTOGRAPHY/positions1000.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:[],
@@ -81,7 +81,7 @@ const positions = new ol.layer.Vector({
 
 const positionsSEX = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/positionsSEX.geojson',
+        url: '../CARTOGRAPHY/positionsSEX.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:[],
@@ -90,7 +90,7 @@ const positionsSEX = new ol.layer.Vector({
 
 const positionsAGE = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/positionsAGE.geojson',
+        url: '../CARTOGRAPHY/positionsAGE.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:[],
@@ -99,7 +99,7 @@ const positionsAGE = new ol.layer.Vector({
 
 const positionsBOTH = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/positionsBOTH.geojson',
+        url: '../CARTOGRAPHY/positionsBOTH.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:1000')})
     }),
     style:[],
@@ -108,7 +108,7 @@ const positionsBOTH = new ol.layer.Vector({
 
 const positionsCanary = new ol.layer.Vector({
     source: new ol.source.Vector({
-        url: 'CARTOGRAPHY/positions4326.geojson',
+        url: '../CARTOGRAPHY/positions4326.geojson',
         format: new ol.format.GeoJSON({dataProjection: ol.proj.get('EPSG:4326')})
     }),
     style:[]

@@ -69,21 +69,6 @@ for i in range(6,len(data)-6,16): #Each region loop
         data_m = [float(item.replace(',','.')) for item in line[2:len(line)-1:3]] #male
         data_f = [float(item.replace(',','.')) for item in line[3::3]] #female
 
-        # equality = mean(list(set(data_m) - set(data_f)))
-        
-        # if(year in dicc['mer'].keys()):
-        #     if(dicc['mer'][year]['value']>equality):
-        #         dicc['mer'][year] = {'region':name_region, 'value':equality}
-        # else:
-        #     dicc['mer'][year] = {'region':name_region, 'value':equality}
-        
-
-        # if(year in dicc['ler'].keys()):
-        #     if(dicc['ler'][year]['value']<equality):
-        #         dicc['ler'][year] = {'region':name_region, 'value':equality}
-        # else:
-        #     dicc['ler'][year] = {'region':name_region, 'value':equality}
-
 #Region with higher unemployment -> (Relative mode) just the region with more %
 #  of all ages and sexs
 
